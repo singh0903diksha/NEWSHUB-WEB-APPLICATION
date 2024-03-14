@@ -1,16 +1,15 @@
-const API_KEY = "a70f616888884c0398e262149daa22af";
-const url = "https://newsapi.org/v2/everything?q=";
+const url = "https://newsdata.io/api/1/news?apikey=pub_2501573d5a66fa29132ca8fa301fb38bbf7cc&q=";
 
-window.addEventListener("load", () => fetchNews("India"));
+window.addEventListener('load',() => fetchNews("online"));
 
-function reload() {
+function reload(){
     window.location.reload();
 }
 
-async function fetchNews(query) {
-    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+async function fetchNews (quary){
+    const res = await fetch(`${url}${quary}`);
     const data = await res.json();
-    bindData(data.articles);
+    bindData(data.results);
 }
 
 function bindData(articles) {
