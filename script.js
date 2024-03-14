@@ -1,4 +1,4 @@
-const url = "https://newsdata.io/api/1/news?apikey=pub_2501573d5a66fa29132ca8fa301fb38bbf7cc&q=";
+const url = "https://newsdata.io/api/1/news?apikey=pub_40005c304056739a426834680fae53f78543d&q=";
 
 window.addEventListener('load',() => fetchNews("online"));
 
